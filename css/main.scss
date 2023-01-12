@@ -1,0 +1,3039 @@
+@import "base/mixins";
+@import "base/reset";
+@import "base/variables";
+
+// *{
+//     border:1px solid red;
+// }
+
+.container {
+  max-width: 964px;
+  padding: 0 12px;
+  margin: 0 auto;
+  // background-color: aqua;
+}
+
+.header {
+  height: 700px;
+  margin: auto;
+  background-image: url(../img/desktop/header.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  .nav {
+    @include size(901px, 36px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 41px;
+    margin-left: -1px;
+    &-logo {
+      @include size-three(152px, 36px, $title);
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    &-registration {
+      @include size-three(153px, 36px, $title);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      &__sign {
+        @include size(90px, 36px);
+        border: 2px solid $title;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+  &-content {
+    @include size(470px, 252.5px);
+    margin: 0 auto;
+    margin-top: 183.5px;
+    &__title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 63px;
+      text-align: center;
+      color: $title;
+    }
+    &__text {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: $text;
+      margin-top: 28.5px;
+    }
+    &__button {
+      @include size-two(225px, 40px, $button);
+      border-radius: 40px;
+      margin: 0 auto;
+      margin-top: 33px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $title;
+      &:hover {
+        @include size-two(230px, 42px, $hover);
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.dreamshare {
+  max-width: 940px;
+  height: 461px;
+  margin-top: 90px;
+  &-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: $title-main;
+  }
+  &-steps {
+    @include size(940px, 400px);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    &__step1 {
+      @include size(300px, 400px);
+      background-image: url(../img/desktop/Steps/Step1.png);
+      &-box {
+        @include size(250px, 160px);
+        margin: 219px auto;
+        &_content {
+          @include size-two(70px, 20px, $button);
+          border-radius: 40px;
+          text-align: center;
+          &-one {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: 2px;
+            color: $title;
+          }
+        }
+      }
+      &-title {
+        @include size-three(250px, 58px, $title);
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        display: flex;
+        align-items: flex-end;
+      }
+      &-text {
+        @include size-three(250px, 57px, $text-steps);
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    &__step2 {
+      @include size(300px, 400px);
+      background-image: url(../img/desktop/Steps/Step2.png);
+      &-box {
+        @include size(250px, 129px);
+        margin: 250px auto;
+        &_content {
+          @include size-two(70px, 20px, $button);
+          border-radius: 40px;
+          text-align: center;
+          &-two {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: 2px;
+            color: $title;
+          }
+        }
+      }
+      &-title {
+        @include size-three(250px, 29px, $title);
+        margin-top: 19px;
+        margin-bottom: 3px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        display: flex;
+        align-items: end;
+      }
+      &-text {
+        @include size-three(250px, 57px, $text-steps);
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    &__step3 {
+      @include size(300px, 400px);
+      background-image: url(../img/desktop/Steps/Step3.png);
+      &-box {
+        @include size(250px, 160px);
+        margin: 219px auto;
+        &_content {
+          @include size-two(70px, 20px, $button);
+          border-radius: 40px;
+          text-align: center;
+          &-three {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: 2px;
+            color: $title;
+          }
+        }
+      }
+      &-title {
+        @include size-three(250px, 58px, $title);
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        display: flex;
+        align-items: flex-end;
+      }
+      &-text {
+        @include size-three(250px, 57px, $text-steps);
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+.partner {
+  max-width: 940px;
+  height: 367px;
+  margin-top: 95px;
+  &-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: $title-main;
+  }
+  &-box {
+    @include size(940px, 301px);
+    margin-top: 34px;
+    &__top {
+      @include size(940px, 225px);
+      display: flex;
+      justify-content: space-between;
+      &-bradley {
+        @include size(221px, 225px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_box {
+          @include size(120px, 120px);
+          background-image: url(../img/desktop/Peoples/Bradley.png);
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          &-icon {
+            @include size(40px, 40px);
+            border-radius: 50%;
+            background-color: $title;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 -4px -3px 0;
+            &__b {
+              @include size(32px, 32px);
+              border-radius: 50%;
+              background: $button;
+              background-image: url(../img/desktop/Peoples/Icons/B1.png);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+        &_name {
+          @include size-three(221px, 18px, $title-main);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          margin-top: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+        &_text {
+          @include size-three(221px, 38px, $text-holidays);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          margin-top: 12px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+      &-marie {
+        @include size(221px, 225px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_box {
+          @include size(120px, 120px);
+          background-image: url(../img/desktop/Peoples/Marie.png);
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          &-icon {
+            @include size(40px, 40px);
+            border-radius: 50%;
+            background-color: $title;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 -4px -3px 0;
+            &__m {
+              @include size(32px, 32px);
+              border-radius: 50%;
+              background: #19d4ca;
+              background-image: url(../img/desktop/Peoples/Icons/M1.png);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+        &_name {
+          @include size-three(221px, 18px, $title-main);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          margin-top: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+        &_text {
+          @include size-three(221px, 38px, $text-holidays);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          margin-top: 12px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+      &-diana {
+        @include size(221px, 225px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_box {
+          @include size(120px, 120px);
+          background-image: url(../img/desktop/Peoples/Diana.png);
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          &-icon {
+            @include size(40px, 40px);
+            border-radius: 50%;
+            background-color: $title;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 -4px -3px 0;
+            &__d {
+              @include size(32px, 32px);
+              border-radius: 50%;
+              background: #ffa710;
+              background-image: url(../img/desktop/Peoples/Icons/D1.png);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+        &_name {
+          @include size-three(221px, 18px, $title-main);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          margin-top: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+        &_text {
+          @include size-three(221px, 57px, $text-holidays);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          margin-top: 12px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+      &-christopher {
+        @include size(221px, 225px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_box {
+          @include size(120px, 120px);
+          background-image: url(../img/desktop/Peoples/Christopher.png);
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          &-icon {
+            @include size(40px, 40px);
+            border-radius: 50%;
+            background-color: $title;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 -4px -3px 0;
+            &__c {
+              @include size(32px, 32px);
+              border-radius: 50%;
+              background: #667df3;
+              background-image: url(../img/desktop/Peoples/Icons/C1.png);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+        &_name {
+          @include size-three(221px, 18px, $title-main);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          margin-top: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+        &_text {
+          @include size-three(221px, 57px, $text-holidays);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          margin-top: 12px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    }
+    &__button {
+      @include size-two(180px, 40px, $title);
+      border: 2px solid $button;
+      border-radius: 40px;
+      margin: 36px auto;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $button;
+      &:hover {
+        @include size-two(182px, 42px, $hover-holidays);
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.holiday {
+  max-width: 940px;
+  height: 1037px;
+  margin-top: 95px;
+  &-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: $title-main;
+    margin-top: -7px;
+  }
+  &-box {
+    @include size(940px, 970px);
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__top {
+      @include size(940px, 310px);
+      display: flex;
+      justify-content: space-between;
+      &-image1 {
+        @include size(300px, 310px);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/desktop/Holidays/holidays1.png);
+        background-size: cover;
+        position: relative;
+        &-overlay {
+          @include size(100%, 100%);
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &-text {
+          @include size-three(209px, 27px, $title);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          z-index: 2;
+        }
+      }
+      &-image2 {
+        @include size(300px, 310px);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/desktop/Holidays/holidays2.png);
+        background-size: cover;
+        position: relative;
+        &-overlay {
+          @include size(100%, 100%);
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &-text {
+          @include size-three(238px, 27px, $title);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          z-index: 2;
+        }
+      }
+      &-image3 {
+        @include size(300px, 310px);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/desktop/Holidays/holidays3.png);
+        background-size: cover;
+        position: relative;
+        &-overlay {
+          @include size(100%, 100%);
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &-text {
+          @include size-three(187px, 54px, $title);
+          width: 187px;
+          height: 54px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          z-index: 2;
+          text-align: center;
+        }
+      }
+    }
+    &__middle {
+      @include size(940px, 310px);
+      display: flex;
+      justify-content: space-between;
+      &-image4 {
+        @include size(300px, 310px);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/desktop/Holidays/holidays4.png);
+        background-size: cover;
+        position: relative;
+        &-overlay {
+          @include size(100%, 100%);
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &-text {
+          @include size-three(80px, 27px, $title);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          z-index: 2;
+        }
+      }
+      &-image5 {
+        @include size(620px, 310px);
+        width: 620px;
+        height: 310px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/desktop/Holidays/holidays5.png);
+        background-size: cover;
+        position: relative;
+        &-overlay {
+          @include size(100%, 100%);
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &-text {
+          @include size-three(261px, 27px, $title);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          z-index: 2;
+        }
+      }
+    }
+    &__bottom {
+      @include size(940px, 310px);
+      display: flex;
+      justify-content: space-between;
+      &-image6 {
+        @include size(620px, 310px);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/desktop/Holidays/holidays6.png);
+        background-size: cover;
+        position: relative;
+        &-overlay {
+          @include size(100%, 100%);
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &-text {
+          @include size-three(277px, 27px, $title);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          z-index: 2;
+        }
+      }
+      &-image7 {
+        @include size(300px, 310px);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/desktop/Holidays/holidays7.png);
+        background-size: cover;
+        position: relative;
+        &-overlay {
+          @include size(100%, 100%);
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &-text {
+          @include size-three(114px, 27px, $title);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+.activity {
+  @include size(482px, 158px);
+  margin: 95px auto;
+  &-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: $title-main;
+    margin-top: -6px;
+  }
+  &-box {
+    @include size(482px, 89px);
+    margin-top: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__text {
+      @include size-three(415px, 24px, $text-holidays);
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+    }
+    &__search {
+      @include size(481.12px, 40px);
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        &_content {
+          @include size-two(299px, 40px, $title);
+          border: 1px solid #d4d4d4;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+          border-radius: 3px;
+          display: flex;
+          align-items: flex-end;
+        }
+        &_button {
+          @include size-two(172.12px, 40px, $button);
+          border-radius: 40px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: $title;
+          &:hover {
+            @include size-two(174px, 42px, $hover);
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+input[type="text"] {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid lightgray;
+}
+
+input::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.footer1 {
+  display: none;
+}
+
+.footer {
+  max-width: 1440px;
+  height: 260px;
+  margin: 0 auto;
+  margin-top: 106px;
+  padding-top: 36px;
+  border-top: 2px solid $button;
+  &-content {
+    @include size(944px, 186px);
+    margin: 0 auto;
+    display: flex;
+    &__title {
+      @include size-three(119px, 20px, $button);
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      display: flex;
+      align-items: flex-end;
+    }
+    &__info {
+      @include size(303px, 186px);
+      margin-left: 122px;
+      display: flex;
+      flex-direction: column;
+      &-top {
+        height: 17px;
+        display: flex;
+        &-company {
+          @include size(151.5px, 184px);
+          &_title {
+            @include size-three(70px, 19px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+        &-partners {
+          @include size(151.5px, 184px);
+          &_title {
+            @include size-three(151.5px, 19px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: right;
+          }
+        }
+      }
+      &-bottom {
+        @include size-three(114px, 159px, $bottom);
+        padding-top: 3px;
+        margin-top: 11px;
+        display: flex;
+        flex-direction: column;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+    &__logo {
+      @include size(113px, 43px);
+      margin-left: 287px;
+      padding-top: 2px;
+      &-text {
+        @include size-three(113px, 12px, $bottom-text);
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        letter-spacing: 1px;
+      }
+      &-image {
+        margin-top: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+
+  .container {
+    max-width: 768px;
+    padding: 0 4px;
+    margin: 0 auto;
+  }
+
+  .header {
+    height: 700px;
+    margin: auto;
+    background-image: url(../img/tablet/tabheader.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    .nav {
+      @include size(670px, 36px);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 41px;
+      margin-left: 28px;
+      &-logo {
+        @include size-three(152px, 36px, $title);
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+      }
+      &-registration {
+        @include size-three(153px, 36px, $title);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        &__sign {
+          @include size(90px, 36px);
+          border: 2px solid $title;
+          border-radius: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+    &-content {
+      @include size(470px, 252.5px);
+      margin: 0 auto;
+      margin-top: 183.5px;
+      &__title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 63px;
+        text-align: center;
+        color: $title;
+      }
+      &__text {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: $text;
+        margin-top: 28.5px;
+      }
+      &__button {
+        @include size-two(225px, 40px, $button);
+        border-radius: 40px;
+        margin: 0 auto;
+        margin-top: 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: $title;
+        &:hover {
+          @include size-two(230px, 42px, $hover);
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .dreamshare {
+    max-width: 748px;
+    height: 462px;
+    margin-top: 94px;
+
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: $title-main;
+    }
+    &-steps {
+      @include size(748px, 400px);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 35px;
+      &__step1 {
+        @include size(236px, 400px);
+        background-image: url(../img/tablet/Steps/tabstep1.png);
+        &-box {
+          @include size(196px, 179px);
+          margin: 205px auto;
+          &_content {
+            @include size-two(70px, 20px, $button);
+            border-radius: 40px;
+            text-align: center;
+            &-one {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 12px;
+              letter-spacing: 2px;
+              color: $title;
+            }
+          }
+        }
+        &-title {
+          @include size-three(196px, 58px, $title);
+          margin-top: 15px;
+          margin-bottom: 10px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+        &-text {
+          @include size-three(196px, 76px, $text-steps);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      &__step2 {
+        @include size(236px, 400px);
+        background-image: url(../img/tablet/Steps/tabstep2.png);
+        &-box {
+          @include size(196px, 129px);
+          margin: 255px auto;
+          &_content {
+            @include size-two(70px, 20px, $button);
+            border-radius: 40px;
+            text-align: center;
+            &-two {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 12px;
+              letter-spacing: 2px;
+              color: $title;
+            }
+          }
+        }
+        &-title {
+          @include size-three(196px, 29px, $title);
+          margin-top: 14px;
+          margin-bottom: 9px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+        &-text {
+          @include size-three(196px, 57px, $text-steps);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      &__step3 {
+        @include size(236px, 400px);
+        background-image: url(../img/tablet/Steps/tabstep3.png);
+        &-box {
+          @include size(196px, 179px);
+          margin: 205px auto;
+          &_content {
+            @include size-two(70px, 20px, $button);
+            border-radius: 40px;
+            text-align: center;
+            &-three {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 12px;
+              letter-spacing: 2px;
+              color: $title;
+            }
+          }
+        }
+        &-title {
+          @include size-three(196px, 58px, $title);
+          margin-top: 15px;
+          margin-bottom: 10px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+        &-text {
+          @include size-three(196px, 76px, $text-steps);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  .partner {
+    max-width: 492px;
+    height: 605px;
+    margin: 95px auto;
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: $title-main;
+    }
+    &-box {
+      @include size(492px, 544px);
+      margin-top: 35px;
+      &__top {
+        @include size(492px, 464px);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        &-bradley {
+          @include size(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 20px;
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Bradley.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__b {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: $button;
+                background-image: url(../img/tablet/Peoples/Icons/B1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 38px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        &-diana {
+          @include size(236px, 224px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Diana.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__d {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: #ffa710;
+                background-image: url(../img/tablet/Peoples/Icons/D1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 57px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        &-marie {
+          @include size(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Marie.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__m {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: #19d4ca;
+                background-image: url(../img/tablet/Peoples/Icons/M1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 38px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        &-christopher {
+          @include size(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Christopher.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__c {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: #667df3;
+                background-image: url(../img/tablet/Peoples/Icons/C1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 38px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+      }
+      &__button {
+        @include size-two(180px, 40px, $title);
+        border: 2px solid $button;
+        border-radius: 40px;
+        margin: 40px auto;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $button;
+        &:hover {
+          @include size-two(182px, 42px, $hover-holidays);
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .holiday {
+    max-width: 748px;
+    height: 1031px;
+    margin-top: 95px;
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+      color: $title-main;
+      margin-top: -1px;
+    }
+    &-box {
+      @include size(748px, 970px);
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__top {
+        @include size(748px, 310px);
+        display: flex;
+        justify-content: space-between;
+        &-image1 {
+          @include size(236px, 310px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/tablet/Holidays/tabholiday1.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 54px, $title);
+            margin-top: -26px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+        &-image2 {
+          @include size(236px, 310px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/tablet/Holidays/tabholiday2.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 54px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+        &-image3 {
+          @include size(236px, 310px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/tablet/Holidays/tabholiday3.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 54px, $title);
+            width: 187px;
+            height: 54px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+      }
+      &__middle {
+        @include size(748px, 310px);
+        display: flex;
+        justify-content: space-between;
+        &-image4 {
+          @include size(236px, 310px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/tablet/Holidays/tabholiday4.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+        &-image5 {
+          @include size(492px, 310px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/tablet/Holidays/tabholiday5.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(261px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+          }
+        }
+      }
+      &__bottom {
+        @include size(748px, 310px);
+        display: flex;
+        justify-content: space-between;
+        &-image6 {
+          @include size(492px, 310px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/tablet/Holidays/tabholiday6.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(277px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+          }
+        }
+        &-image7 {
+          @include size(236px, 310px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/tablet/Holidays/tabholiday7.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .activity {
+    @include size(482px, 158px);
+    margin: 95px auto;
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: $title-main;
+      // margin-top: 8px;
+      padding-top: 6px;
+    }
+    &-box {
+      @include size(482px, 89px);
+      margin-top: 43px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      &__text {
+        @include size-three(415px, 24px, $text-holidays);
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+      }
+      &__search {
+        @include size(481.12px, 40px);
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          &_content {
+            @include size-two(299px, 40px, $title);
+            border: 1px solid #d4d4d4;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+            border-radius: 3px;
+            display: flex;
+            align-items: flex-end;
+          }
+          &_button {
+            @include size-two(172.12px, 40px, $button);
+            border-radius: 40px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $title;
+            &:hover {
+              @include size-two(174px, 42px, $hover);
+              font-size: 15px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  input[type="text"] {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  input[type="text"]:focus {
+    outline: 2px solid lightgray;
+  }
+
+  input::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .footer1 {
+    display: none;
+  }
+
+  .footer {
+    max-width: 768px;
+    height: 260px;
+    margin: 0 auto;
+    margin-top: 106px;
+    padding-top: 36px;
+    border-top: 2px solid $button;
+    &-content {
+      @include size(692px, 186px);
+      margin: 0 auto;
+      display: flex;
+      &__title {
+        @include size-three(119px, 20px, $button);
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: flex-end;
+      }
+      &__info {
+        @include size(234px, 184px);
+        margin-left: 108px;
+        display: flex;
+        flex-direction: column;
+        &-top {
+          height: 17px;
+          display: flex;
+          &-company {
+            @include size(117px, 184px);
+            &_title {
+              @include size-three(70px, 19px, $title-main);
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+              display: flex;
+              align-items: flex-end;
+            }
+          }
+          &-partners {
+            @include size(117px, 184px);
+            &_title {
+              @include size-three(117px, 19px, $title-main);
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+              display: flex;
+              align-items: flex-end;
+              justify-content: right;
+            }
+          }
+        }
+        &-bottom {
+          @include size-three(114px, 159px, $bottom);
+          padding-top: 3px;
+          margin-top: 11px;
+          display: flex;
+          flex-direction: column;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+      &__logo {
+        @include size(113px, 43px);
+        margin-left: 118px;
+        padding-top: 2px;
+        &-text {
+          @include size-three(113px, 12px, $bottom-text);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 12px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: end;
+          letter-spacing: 1px;
+        }
+        &-image {
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 299px) {
+  // *{
+  //   border: 1px solid red;
+  // }
+
+  .container {
+    max-width: 320px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  .header {
+    height: 540px;
+    margin: auto;
+    background-image: url(../img/mobile/mobheader.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    .nav {
+      @include size(164px, 177px);
+      margin: 0 auto;
+      margin-left: 75px;
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      &-logo {
+        @include size-three(152px, 24px, $title);
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        justify-content: right;
+        align-items: end;
+        text-transform: uppercase;
+
+        margin-left: 10px;
+      }
+      &-registration {
+        @include size-three(153px, 36px, $title);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        &__sign {
+          @include size(90px, 36px);
+          border: 2px solid $title;
+          border-radius: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+    &-content {
+      @include size(281px, 183.5px);
+      margin: 26.5px 0 0 20px;
+      &__title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        text-align: center;
+        color: $title;
+      }
+      &__text {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: $text;
+        margin-top: 5.5px;
+      }
+      &__button {
+        @include size-two(280px, 40px, $button);
+        border-radius: 40px;
+        margin: 0 auto;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: $title;
+        &:hover {
+          @include size-two(282px, 42px, $hover);
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .dreamshare {
+    max-width: 300px;
+    height: 782px;
+    margin: 32px auto;
+
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: $title-main;
+    }
+    &-steps {
+      @include size(300px, 740px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 15px;
+      &__step1 {
+        @include size(300px, 240px);
+        background-image: url(../img/mobile/Steps/mobstep1.png);
+        &-box {
+          @include size(250px, 160px);
+          margin: 63px 29px 17px 21px;
+          &_content {
+            @include size-two(70px, 20px, $button);
+            border-radius: 40px;
+            text-align: center;
+            &-one {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 12px;
+              letter-spacing: 2px;
+              color: $title;
+            }
+          }
+        }
+        &-title {
+          @include size-three(250px, 58px, $title);
+          margin-top: 15px;
+          margin-bottom: 10px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+        &-text {
+          @include size-three(250px, 57px, $text-steps);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      &__step2 {
+        @include size(300px, 240px);
+        background-image: url(../img/mobile/Steps/mobstep2.png);
+        &-box {
+          @include size(250px, 129px);
+          margin: 94px 29px 17px 21px;
+          &_content {
+            @include size-two(70px, 20px, $button);
+            border-radius: 40px;
+            text-align: center;
+            &-two {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 12px;
+              letter-spacing: 2px;
+              color: $title;
+            }
+          }
+        }
+        &-title {
+          @include size-three(250px, 29px, $title);
+          margin-top: 14px;
+          margin-bottom: 9px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+        &-text {
+          @include size-three(250px, 57px, $text-steps);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      &__step3 {
+        @include size(300px, 240px);
+        background-image: url(../img/mobile/Steps/mobstep3.png);
+        &-box {
+          @include size(250px, 160px);
+          margin: 63px 29px 17px 21px;
+          &_content {
+            @include size-two(70px, 20px, $button);
+            border-radius: 40px;
+            text-align: center;
+            &-three {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 12px;
+              letter-spacing: 2px;
+              color: $title;
+            }
+          }
+        }
+        &-title {
+          @include size-three(250px, 58px, $title);
+          margin-top: 15px;
+          margin-bottom: 10px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+        &-text {
+          @include size-three(250px, 57px, $text-steps);
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 14px;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  .partner {
+    max-width: 280px;
+    height: 1031px;
+    margin: 38px auto;
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: $title-main;
+    }
+    &-box {
+      @include size(280px, 966px);
+      margin-top: 14px;
+      &__top {
+        @include size(236px, 887px);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-bradley {
+          @include size(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          order: 1;
+          margin-bottom: 5px;
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Bradley.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__b {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: $button;
+                background-image: url(../img/tablet/Peoples/Icons/B1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 38px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        &-diana {
+          @include size(236px, 224px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          order: 2;
+         
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Diana.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__d {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: #ffa710;
+                background-image: url(../img/tablet/Peoples/Icons/D1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 57px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        &-marie {
+          @include size(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          order: 3;
+          margin-bottom: -8px;
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Marie.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__m {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: #19d4ca;
+                background-image: url(../img/tablet/Peoples/Icons/M1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 38px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        &-christopher {
+          @include size(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          order: 4;
+          margin-bottom: -6px;
+          &_box {
+            @include size(120px, 120px);
+            background-image: url(../img/tablet/Peoples/Christopher.png);
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            &-icon {
+              @include size(40px, 40px);
+              border-radius: 50%;
+              background-color: $title;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 -4px -3px 0;
+              &__c {
+                @include size(32px, 32px);
+                border-radius: 50%;
+                background: #667df3;
+                background-image: url(../img/tablet/Peoples/Icons/C1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          &_name {
+            @include size-three(236px, 18px, $title-main);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+          &_text {
+            @include size-three(236px, 38px, $text-holidays);
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+      }
+      &__button {
+        @include size-two(280px, 40px, $title);
+        border: 2px solid $button;
+        border-radius: 40px;
+        margin: 36px auto;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $button;
+        &:hover {
+          @include size-two(282px, 42px, $hover-holidays);
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .holiday {
+    max-width: 300px;
+    height: 987px;
+    margin-top: 35px;
+    &-title {
+      width: 280px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+
+      color: $title-main;
+      margin-top: -1px;
+    }
+    &-box {
+      @include size(300px, 900px);
+      margin-top: 33px;
+      flex-direction: column;
+      justify-content: space-between;
+      &__top {
+        @include size(300px, 380px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-image1 {
+          @include size(300px, 120px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/mobile/Holidays/mobholidays1.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 54px, $title);
+            margin-top: 26px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+        &-image2 {
+          @include size(300px, 120px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/mobile/Holidays/mobholidays2.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 54px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+        &-image3 {
+          @include size(300px, 120px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/mobile/Holidays/mobholidays3.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 54px, $title);
+            width: 187px;
+            height: 54px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+      }
+      &__middle {
+        @include size(300px, 250px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-image4 {
+          @include size(300px, 120px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/mobile/Holidays/mobholidays4.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+        &-image5 {
+          @include size(300px, 120px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/mobile/Holidays/mobholidays5.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(261px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+          }
+        }
+      }
+      &__bottom {
+        @include size(300px, 250px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-image6 {
+          @include size(300px, 120px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/mobile/Holidays/mobholidays6.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(277px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+          }
+        }
+        &-image7 {
+          @include size(300px, 120px);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(../img/mobile/Holidays/mobholidays7.png);
+          background-size: cover;
+          position: relative;
+          &-overlay {
+            @include size(100%, 100%);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          &-text {
+            @include size-three(206px, 27px, $title);
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            z-index: 2;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .activity {
+    @include size(280px, 192px);
+    margin: 35px auto;
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: $title-main;
+      // margin-top: 8px;
+      padding-top: 6px;
+    }
+    &-box {
+      @include size(280px, 129px);
+      margin-top: 9px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      &__text {
+        @include size-three(280px, 24px, $text-holidays);
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+      }
+      &__search {
+        @include size(280px, 90px);
+        &-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &_content {
+            @include size-two(280px, 40px, $title);
+            border: 1px solid #d4d4d4;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+            border-radius: 3px;
+            display: flex;
+            align-items: flex-end;
+          }
+          &_button {
+            @include size-two(280px, 40px, $button);
+            border-radius: 40px;
+            margin-top: 10px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $title;
+            &:hover {
+              @include size-two(282px, 42px, $hover);
+              font-size: 15px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  input[type="text"] {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  input[type="text"]:focus {
+    outline: 2px solid lightgray;
+  }
+
+  input::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .footer {
+    display: none;
+    background-color: aqua;
+    max-width: 320px;
+    height: 226px;
+    // margin: 0 auto;
+    margin-top: 43px;
+    padding-top: 22px;
+    border-top: 2px solid $button;
+    &-content {
+      background-color: brown;
+      @include size(280px, 183px);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: center;
+      &__title {
+        margin: 0 auto;
+        background-color: coral;
+        @include size-three(119px, 20px, $button);
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+      }
+      &__info {
+        @include size(280px, 93px);
+        margin: 0 auto;
+        background-color: chartreuse;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        &-top {
+          width: 280px;
+          height: 94px;
+          background-color: blue;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          // flex-wrap: wrap;
+          &-company {
+            @include size(280px, 17px);
+            order: 1;
+            &_title {
+              @include size-three(280px, 19px, $title-main);
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+            }
+          }
+          &-partners {
+            @include size(280px, 17px);
+            order: 3;
+            &_title {
+              @include size-three(280px, 19px, $title-main);
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              // align-items: flex-end;
+            }
+          }
+        }
+        &-bottom {
+          order: 2;
+          @include size-three(280px, 52px, $bottom);
+          background-color: darkorange;
+          margin: 0 auto;
+          // padding-top: 3px;
+          // margin-top: 11px;
+          display: flex;
+          flex-direction: row;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 26px;
+          text-align: center;
+        }
+      }
+      &__logo {
+        background-color: crimson;
+        @include size(113px, 43px);
+        margin: 0 auto;
+        padding-top: 2px;
+        &-text {
+          @include size-three(113px, 12px, $bottom-text);
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 12px;
+          display: flex;
+          // align-items: flex-end;
+          justify-content: end;
+          letter-spacing: 1px;
+        }
+        &-image {
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+  .footer1 {
+    display: block;
+    max-width: 320px;
+    height: 226px;
+    margin: 0 auto;
+    margin-top: 43px;
+    padding-top: 22px;
+    border-top: 2px solid $button;
+    &-content {
+      @include size(280px, 183px);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      &__title {
+        margin: 0 auto;
+        @include size-three(119px, 20px, $button);
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+      }
+      &__info {
+        @include size(280px, 93px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-top {
+          width: 280px;
+          height: 94px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &-company {
+            @include size(280px, 17px);
+            flex-direction: column;
+            justify-content: center;
+            &_title {
+              @include size-three(280px, 19px, $title-main);
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+            }
+            &_bottom {
+              @include size-three(280px, 52px, $bottom);
+              margin-top: 2px;
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 26px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: justify;
+                         
+            }
+          }
+          &-partners {
+            @include size(280px, 17px);
+            &_title {
+              @include size-three(280px, 19px, $title-main);
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              }
+          }
+        }
+      }
+      &__logo {
+        @include size(113px, 43px);
+        margin: 0 auto;
+        
+        &-text {
+          @include size-three(113px, 12px, $bottom-text);
+          margin-top: 8px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          letter-spacing: 1px;
+        }
+        &-image {
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+}

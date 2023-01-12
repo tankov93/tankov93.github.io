@@ -1,0 +1,16 @@
+@mixin size ($w, $h){
+    width: $w;
+    height: $h;
+}
+
+@mixin size-two($w, $h, $bg){
+    width: $w;
+    height: $h;
+    background: $bg;
+}
+
+@mixin size-three($w, $h, $c){
+    width: $w;
+    height: $h;
+    color: $c;
+}
